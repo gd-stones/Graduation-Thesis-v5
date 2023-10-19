@@ -23,7 +23,6 @@ while True:
         # Movement control
         if fingers_right == [1, 1, 1, 1, 1] and fingers_left == [1, 1, 1, 1, 1]:
             action = "idle"
-            print("aaaaaaa")
         elif fingers_right == [0, 0, 0, 0, 0] and fingers_left == [1, 1, 1, 1, 1]:
             action = "idle-walking"
         elif fingers_right == [1, 0, 0, 0, 0] and fingers_left == [1, 1, 1, 1, 1]:

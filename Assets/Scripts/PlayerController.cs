@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("idle-walking", true);
         }
-        else if (action == "idle" || Input.GetKeyUp(KeyCode.W))
+        else if (action != "idle-walking" || action == "idle" || Input.GetKeyUp(KeyCode.W))
         {
             anim.SetBool("idle-walking", false);
         }
@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("idle-backward", true);
         }
-        else if (action == "idle" || Input.GetKeyUp(KeyCode.S))
+        else if (action != "idle-backward" || action == "idle" || Input.GetKeyUp(KeyCode.S))
         {
             anim.SetBool("idle-backward", false);
         }
@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("idle-running", true);
         }
-        else if (action == "idle" || Input.GetKeyUp(KeyCode.Q))
+        else if (action != "idle-running" || action == "idle" || Input.GetKeyUp(KeyCode.Q))
         {
             anim.SetBool("idle-running", false);
         }
@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("idle-fast_run", true);
         }
-        else if (action == "idle" || Input.GetKeyUp(KeyCode.E))
+        else if (action != "idle-fast_run" || action == "idle" || Input.GetKeyUp(KeyCode.E))
         {
             anim.SetBool("idle-fast_run", false);
         }

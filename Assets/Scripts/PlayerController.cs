@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
     private void ActionController()
     {
+        // Action 1-10
         if (action == "jump_attack" || Input.GetKeyDown(KeyCode.Alpha1))
         {
             startRotation = transform.rotation;
@@ -31,90 +32,91 @@ public class PlayerController : MonoBehaviour
             startRotation = transform.rotation;
             PlayAction("punching_bag");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (action == "boxing" || Input.GetKeyDown(KeyCode.Alpha3))
         {
             startRotation = transform.rotation;
             PlayAction("boxing");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        if (action == "hook_punch" || Input.GetKeyDown(KeyCode.Alpha4))
         {
             startRotation = transform.rotation;
             PlayAction("hook_punch");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha5))
+        if (action == "fireball" || Input.GetKeyDown(KeyCode.Alpha5))
         {
             startRotation = transform.rotation;
             PlayAction("fireball");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha6))
+        if (action == "materlo_2" || Input.GetKeyDown(KeyCode.Alpha6))
         {
             startRotation = transform.rotation;
             PlayAction("materlo_2");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha7))
+        if (action == "chapa_giratoria" || Input.GetKeyDown(KeyCode.Alpha7))
         {
             startRotation = transform.rotation;
             PlayAction("chapa_giratoria");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha8))
+        if (action == "front_twist_flip" || Input.GetKeyDown(KeyCode.Alpha8))
         {
             startRotation = transform.rotation;
             PlayAction("front_twist_flip");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha9))
+        if (action == "butterfly_twirl" || Input.GetKeyDown(KeyCode.Alpha9))
         {
             startRotation = transform.rotation;
             PlayAction("butterfly_twirl");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha0))
+        if (action == "breakdance_1990" || Input.GetKeyDown(KeyCode.Alpha0))
         {
             startRotation = transform.rotation;
             PlayAction("breakdance_1990");
         }
 
-        if (Input.GetKey(KeyCode.W))
+        // Movement
+        if (action == "idle-walking" || Input.GetKey(KeyCode.W))
         {
             anim.SetBool("idle-walking", true);
         }
-        else if (Input.GetKeyUp(KeyCode.W))
+        else if (action == "idle" || Input.GetKeyUp(KeyCode.W))
         {
             anim.SetBool("idle-walking", false);
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (action == "idle-backward" || Input.GetKey(KeyCode.S))
         {
             anim.SetBool("idle-backward", true);
         }
-        else if (Input.GetKeyUp(KeyCode.S))
+        else if (action == "idle" || Input.GetKeyUp(KeyCode.S))
         {
             anim.SetBool("idle-backward", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.A) ||
+        if (action == "left_turn" || Input.GetKeyDown(KeyCode.A) ||
             (Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.A)))
         {
             PlayAction("left_turn");
         }
-        if (Input.GetKeyDown(KeyCode.D) ||
+        if (action == "right_turn" || Input.GetKeyDown(KeyCode.D) ||
             (Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.D)))
         {
             PlayAction("right_turn");
         }
 
-        if (Input.GetKey(KeyCode.Q))
+        if (action == "idle-running" || Input.GetKey(KeyCode.Q))
         {
             anim.SetBool("idle-running", true);
         }
-        else if (Input.GetKeyUp(KeyCode.Q))
+        else if (action == "idle" || Input.GetKeyUp(KeyCode.Q))
         {
             anim.SetBool("idle-running", false);
         }
 
-        if (Input.GetKey(KeyCode.E))
+        if (action == "idle-fast_run" || Input.GetKey(KeyCode.E))
         {
             anim.SetBool("idle-fast_run", true);
         }
-        else if (Input.GetKeyUp(KeyCode.E))
+        else if (action == "idle" || Input.GetKeyUp(KeyCode.E))
         {
             anim.SetBool("idle-fast_run", false);
         }

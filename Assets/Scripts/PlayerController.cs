@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
             startRotation = transform.rotation;
             PlayAction("jump_attack");
         }
-        if (action == "punching_bag" ||  Input.GetKeyDown(KeyCode.Alpha2))
+        if (action == "punching_bag" || Input.GetKeyDown(KeyCode.Alpha2))
         {
             startRotation = transform.rotation;
             PlayAction("punching_bag");
@@ -93,14 +93,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A) ||
             (Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.A)))
         {
-            anim.ResetTrigger("right_turn");
-            anim.SetTrigger("left_turn");
+            PlayAction("left_turn");
         }
         if (Input.GetKeyDown(KeyCode.D) ||
             (Input.GetKey(KeyCode.W) && Input.GetKeyDown(KeyCode.D)))
         {
-            anim.ResetTrigger("left_turn");
-            anim.SetTrigger("right_turn");
+            PlayAction("right_turn");
         }
 
         if (Input.GetKey(KeyCode.Q))
@@ -125,7 +123,8 @@ public class PlayerController : MonoBehaviour
     private void PlayAction(string action)
     {
         string[] actions =  { "jump_attack", "punching_bag", "boxing", "hook_punch", "fireball",
-            "materlo_2", "chapa_giratoria", "front_twist_flip", "butterfly_twirl", "breakdance_1990" };
+            "materlo_2", "chapa_giratoria", "front_twist_flip", "butterfly_twirl", "breakdance_1990", 
+            "left_turn", "right_turn" };
 
         foreach (var act in actions)
             anim.ResetTrigger(act);

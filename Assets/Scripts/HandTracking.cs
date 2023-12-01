@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HandTracking_old : MonoBehaviour
 {
-    public UDPReceive_old udpReceive;
+    public UDPReceive udpReceive;
     public GameObject[] handPoints;
 
     void Update()

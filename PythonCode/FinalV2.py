@@ -3,8 +3,8 @@ import socket
 from cvzone.HandTrackingModule import HandDetector
 
 cap = cv2.VideoCapture(0)
-cap.set(3, 1280)
-cap.set(4, 720)
+cap.set(3, 768)
+cap.set(4, 432)
 
 detector = HandDetector(detectionCon=0.7, maxHands=2)
 

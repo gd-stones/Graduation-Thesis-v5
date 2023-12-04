@@ -1,6 +1,7 @@
-# Graduation-Thesis-v5
-Graduation Thesis v5
+# Hand tracking to control robot
 
-Continue working on graduation project after fixing errors in version 4
+Use the python library to track hand gestures to control the robot's actions in real time (Continue working after fixing errors in version 4)
 
-Adding descriptive images of the project and videos is even better
+![](https://github.com/gd-stones/Hand-Tracking-Control-Robot/blob/master/GamePlayImages/1.png)
+
+![](https://github.com/gd-stones/Hand-Tracking-Control-Robot/blob/master/GamePlayImages/2.png)
